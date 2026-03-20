@@ -1,1 +1,88 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raji Ice Cream 💙 🍦</title><style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  margin: 0;
+  padding: 0;
+}
 
+header {
+  text-align: center;
+  padding: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.item input {
+  width: 50px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #4facfe;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00c6ff;
+}
+
+.total {
+  font-size: 22px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+</style></head><body><header>Raji Ice Cream 💙</header><div class="container">  <div class="item">Vanilla - ₹50 <input type="number" id="vanilla" min="0" value="0"></div>
+  <div class="item">Chocolate - ₹60 <input type="number" id="chocolate" min="0" value="0"></div>
+  <div class="item">Strawberry - ₹55 <input type="number" id="strawberry" min="0" value="0"></div>
+  <div class="item">Butterscotch - ₹65 <input type="number" id="butter" min="0" value="0"></div>
+  <div class="item">Mango - ₹50 <input type="number" id="mango" min="0" value="0"></div>
+  <div class="item">Black Currant - ₹70 <input type="number" id="black" min="0" value="0"></div>
+  <div class="item">Pista - ₹60 <input type="number" id="pista" min="0" value="0"></div><button onclick="calculateTotal()">Calculate Total</button>
+
+  <div class="total" id="total">Total: ₹0</div></div><script>
+function calculateTotal() {
+  let total = 0;
+
+  total += document.getElementById("vanilla").value * 50;
+  total += document.getElementById("chocolate").value * 60;
+  total += document.getElementById("strawberry").value * 55;
+  total += document.getElementById("butter").value * 65;
+  total += document.getElementById("mango").value * 50;
+  total += document.getElementById("black").value * 70;
+  total += document.getElementById("pista").value * 60;
+
+  document.getElementById("total").innerText = "Total: ₹" + total;
+}
+</script></body>
+</html>
